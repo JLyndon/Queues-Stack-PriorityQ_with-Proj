@@ -1,6 +1,20 @@
 from collections import deque
 # from heapq import heappop, heappush #PART: heap I
+# from itertools import count #PART: itertools I
 
+
+# ------------------MIXIN I----------------------
+# class IterableMixin:
+#     def __len__(self):
+#         return len(self._elements)
+
+#     def __iter__(self):
+#         while len(self) > 0:
+#             yield self.dequeue()
+
+# class Queue(IterableMixin):
+
+# class PriorityQueue(IterableMixin):
 
 class Queue:
     def __init__(self):
@@ -58,3 +72,17 @@ class Queue:
 
 #     def dequeue(self):
 #         return heappop(self._elements)[1]
+
+# ----------------itertools I----------------------
+
+# class PriorityQueue:
+#     def __init__(self):
+#         self._elements = []
+#         self._counter = count()
+
+#     def enqueue_with_priority(self, priority, value):
+#         element = (-priority, next(self._counter), value)
+#         heappush(self._elements, element)
+
+#     def dequeue(self):
+#         return heappop(self._elements)[-1]
